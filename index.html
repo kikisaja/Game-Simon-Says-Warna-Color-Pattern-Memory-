@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Pattern Memory (Simon Says) 🎮</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">kikisaja No. 126</span>
+            <h1>🎮 SIMON SAYS MEMORY</h1>
+            <p>Hafalkan dan ulangi urutan pola warna yang menyala!</p>
+        </header>
+
+        <!-- Status Skor & Level -->
+        <div class="stats-panel">
+            <div class="stat-box">
+                <span class="stat-label">Level</span>
+                <strong id="level-display">0</strong>
+            </div>
+            <div class="stat-box score">
+                <span class="stat-label">Skor</span>
+                <strong id="score-display">0</strong>
+            </div>
+        </div>
+
+        <!-- Instruksi Permainan -->
+        <div class="instruction-box" id="instruction-box">
+            Tekan tombol "Mulai Game" untuk memulai tantangan!
+        </div>
+
+        <!-- Grid 4 Tombol Warna Simon Says -->
+        <div class="simon-grid">
+            <button type="button" class="simon-btn green" data-color="green" id="btn-green"></button>
+            <button type="button" class="simon-btn red" data-color="red" id="btn-red"></button>
+            <button type="button" class="simon-btn yellow" data-color="yellow" id="btn-yellow"></button>
+            <button type="button" class="simon-btn blue" data-color="blue" id="btn-blue"></button>
+        </div>
+
+        <!-- Tombol Kontrol Mulai -->
+        <button type="button" id="btn-start" class="btn-start">🚀 MULAI GAME</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
