@@ -1,0 +1,165 @@
+:root {
+    --bg-main: #facc15; /* Warna kuning pop */
+    --card-bg: #ffffff;
+    --stroke-dark: #0f172a;
+    --pop-green: #4ade80;
+    --pop-red: #f87171;
+    --pop-yellow: #facc15;
+    --pop-blue: #38bdf8;
+    --pop-purple: #c084fc;
+    --text-dark: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- KARTU UTAMA WIDGET --- */
+.app-card {
+    background-color: var(--card-bg);
+    padding: 28px;
+    border-radius: 24px;
+    border: 4px solid var(--stroke-dark);
+    box-shadow: 10px 10px 0px var(--stroke-dark);
+    max-width: 440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- HEADER --- */
+.app-header {
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--pop-purple);
+    color: #ffffff;
+    border: 2px solid var(--stroke-dark);
+    padding: 4px 12px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.app-header h1 {
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.app-header p {
+    font-size: 0.8rem;
+    color: #475569;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* --- STATS PANEL --- */
+.stats-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.stat-box {
+    background-color: #f8fafc;
+    border: 3px solid var(--stroke-dark);
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+}
+
+.stat-box.score {
+    background-color: var(--pop-blue);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.stat-box strong {
+    font-size: 0.95rem;
+    font-weight: 900;
+}
+
+/* --- INSTRUCTION BOX --- */
+.instruction-box {
+    background-color: #f1f5f9;
+    border: 3px solid var(--stroke-dark);
+    padding: 10px 14px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.82rem;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+}
+
+/* --- SIMON GRID (4 TOMBOL WARNA) --- */
+.simon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    aspect-ratio: 1;
+}
+
+.simon-btn {
+    border: 4px solid var(--stroke-dark);
+    border-radius: 18px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--stroke-dark);
+    transition: transform 0.1s ease, filter 0.1s ease;
+    opacity: 0.6;
+}
+
+.simon-btn.green { background-color: var(--pop-green); }
+.simon-btn.red { background-color: var(--pop-red); }
+.simon-btn.yellow { background-color: var(--pop-yellow); }
+.simon-btn.blue { background-color: var(--pop-blue); }
+
+/* Tombol aktif / menyala */
+.simon-btn.active,
+.simon-btn:active {
+    opacity: 1;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--stroke-dark);
+    filter: brightness(1.2);
+}
+
+/* --- TOMBOL MULAI --- */
+.btn-start {
+    background-color: var(--pop-green);
+    border: 3px solid var(--stroke-dark);
+    padding: 14px;
+    border-radius: 14px;
+    font-weight: 900;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--stroke-dark);
+    transition: all 0.15s ease;
+}
+
+.btn-start:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--stroke-dark);
+}
